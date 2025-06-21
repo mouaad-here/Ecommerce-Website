@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Your Ultimate Shopping Destination</title>
+    <link rel="icon" href="data:image/svg+xml,%3csvg width='32' height='32' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.2998 5H16.6998C17.8044 5 18.6998 5.89543 18.6998 7V19C18.6998 20.1046 17.8044 21 16.6998 21H7.2998C6.19523 21 5.2998 20.1046 5.2998 19V7C5.2998 5.89543 6.19523 5 7.2998 5Z' stroke='%233b82f6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V5' stroke='%233b82f6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-main">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#" class="logo">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.2998 5H16.6998C17.8044 5 18.6998 5.89543 18.6998 7V19C18.6998 20.1046 17.8044 21 16.6998 21H7.2998C6.19523 21 5.2998 20.1046 5.2998 19V7C5.2998 5.89543 6.19523 5 7.2998 5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="logo-text">Shop</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Search -->
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="search-container mx-auto" id="desktopSearchContainer">
+                            <div class="search-wrapper">
+                                <input type="text" class="search-input" placeholder="Search for products..." id="desktopSearchInput" autocomplete="off">
+                                <button class="search-btn" id="desktopSearchBtn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <div class="search-suggestions" id="desktopSearchSuggestions"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Actions -->
+                    <div class="col-lg-3 col-md-8 col-sm-6 col-6 d-flex justify-content-end align-items-center">
+                        <!-- Desktop Actions -->
+                        <div class="header-actions d-none d-lg-flex">
+                             <button class="header-btn" id="theme-toggle" title="Toggle Theme">
+                                <i class="fas fa-moon"></i>
+                            </button>
+                            <a href="#" class="header-btn" data-bs-toggle="modal" data-bs-target="#authModal" id="authBtn">
+                                <i class="fas fa-user"></i>
+                                <span class="d-none d-sm-inline">Sign In</span>
+                            </a>
+                            <a href="#" class="header-btn cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="d-none d-sm-inline">Cart</span>
+                                <span class="cart-count" id="cartCount">0</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Mobile Toggles -->
+                        <div class="d-lg-none">
+                            <button class="mobile-search-toggle" id="mobileSearchToggle" aria-label="Open search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="d-lg-none">
+                            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <h3>Menu</h3>
+                    <button class="mobile-menu-close" id="mobileMenuClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="mobile-menu-body">
+                    <div class="mobile-actions">
+                        <button class="mobile-action-btn" id="mobileThemeToggle">
+                            <i class="fas fa-moon"></i>
+                            <span>Toggle Theme</span>
+                        </button>
+                        <a href="#" class="mobile-action-btn" data-bs-toggle="modal" data-bs-target="#authModal" id="mobileAuthBtn">
+                            <i class="fas fa-user"></i>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="#" class="mobile-action-btn" data-bs-toggle="modal" data-bs-target="#cartModal" id="mobileCartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Cart</span>
+                            <span class="mobile-cart-count" id="mobileCartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Search Modal -->
+        <div class="mobile-search-overlay" id="mobileSearchOverlay">
+            <div class="mobile-search-modal">
+                <div class="mobile-search-header">
+                    <h3 class="mobile-search-title">Search Products</h3>
+                    <button class="mobile-search-close" id="mobileSearchClose">&times;</button>
+                </div>
+                <div class="mobile-search-input-container">
+                    <input type="text" class="mobile-search-input" id="mobileSearchInput" placeholder="Search for products...">
+                    <div class="mobile-search-suggestions" id="mobileSearchSuggestions"></div>
+                </div>
+                <button class="mobile-search-btn" id="mobileSearchBtn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container-fluid">
+            <div class="hero-content">
+                <h1 class="hero-title">All Your Needs, One Destination</h1>
+                <p class="hero-subtitle">Discover a vast collection of products. Quality, convenience, and style, all delivered to you.</p>
+                <a href="#products" class="hero-btn">Explore Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container-fluid">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Discover our handpicked selection of trending products</p>
+            </div>
+            
+            <!-- Loading Spinner -->
+            <div class="loading-container" id="loadingContainer">
+                <div class="spinner"></div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid" style="display: none;">
+                <!-- Products will be loaded here -->
+            </div>
+            
+            <!-- No Products Message -->
+            <div class="no-products" id="noProducts" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+
+            <div class="text-center mt-5" id="loadMoreContainer" style="display: none;">
+                <button class="btn btn-primary btn-lg" id="loadMoreBtn">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container-fluid">
+            <div class="categories-header">
+                <h2>Shop by Category</h2>
+                <p>Discover amazing products in your favorite categories</p>
+            </div>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">ShopHub</h5>
+                    <p>Your ultimate destination for shopping. We provide the best products from top brands with unbeatable prices and fast delivery.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Shop</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Home & Kitchen</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Stay Updated</h5>
+                    <p>Subscribe to our newsletter to get the latest deals and updates.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" style="border-right:0;">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopHub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome to ShopHub</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs mb-3" id="authTabs">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#signin">Sign In</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#signup">Sign Up</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="signin">
+                            <form id="signinForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                            </form>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="signup">
+                            <form id="signupForm">
+                                <div class="mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <div class="text-center py-5">
+                            <i class="fas fa-shopping-cart text-muted" style="font-size: 3rem;"></i>
+                            <h4 class="mt-3">Your cart is empty</h4>
+                            <p class="text-muted">Start shopping to add items to your cart</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="mb-0">Total: $<span id="cartTotal">0.00</span></h4>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg" id="checkoutBtn">
+                                <i class="fas fa-credit-card me-2"></i>Proceed to Checkout
+                            </button>
+                             <button class="btn btn-outline-danger" id="clearCartBtn">Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productDetailTitle">Product Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="productDetailBody">
+                    <!-- Dynamic content will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html> 
