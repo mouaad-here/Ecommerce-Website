@@ -12,11 +12,7 @@
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
-- [Development Process](#development-process)
-- [Code Quality Improvements](#code-quality-improvements)
 - [Installation & Setup](#installation--setup)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -30,31 +26,31 @@ A modern, responsive e-commerce website built with vanilla HTML, CSS, and JavaSc
 ## ✨ Features
 
 ### 🎨 Design & UI/UX
-- **Dark/Light Theme Toggle** - Seamless theme switching with smooth transitions
-- **Responsive Design** - Mobile-first approach with breakpoints for all devices
-- **Modern UI Components** - Cards, modals, buttons with hover effects and animations
-- **Gradient Backgrounds** - Beautiful gradient overlays and backgrounds
-- **Smooth Animations** - CSS transitions and transforms for enhanced user experience
+- **Theme Toggle** – Dark/Light mode with smooth transitions  
+- **Responsive Design** – Mobile-first layout for all devices  
+- **Modern Components** – Cards, modals, buttons with animations  
+- **Gradient Backgrounds** – Visually appealing overlays  
+- **Smooth Animations** – Enhanced user experience
 
-### 🛍️ E-commerce Functionality
-- **Product Catalog** - Grid layout with product cards
-- **Product Details Modal** - Detailed view with images, descriptions, and pricing
-- **Shopping Cart** - Add/remove items, quantity management, total calculation
-- **Search Functionality** - Real-time search with suggestions
-- **Category Filtering** - Browse products by categories
-- **Load More Products** - Pagination with "Load More" button
+### 🛍️ E-commerce Features
+- **Product Catalog** – Grid of product cards  
+- **Product Modal** – Details with images and pricing  
+- **Shopping Cart** – Item management with total calculation  
+- **Search** – Real-time with suggestions  
+- **Category Filter** – Browse by category  
+- **Load More** – Button-based pagination
 
 ### 📱 Mobile Experience
-- **Mobile Menu** - Slide-out navigation menu for mobile devices
-- **Mobile Search** - Dedicated search modal for mobile users
-- **Touch-Friendly** - Optimized touch targets and interactions
-- **Responsive Grid** - Adaptive product grid for different screen sizes
+- **Mobile Menu** – Slide-out navigation  
+- **Mobile Search** – Search modal for mobile  
+- **Touch-Friendly** – Optimized for gestures  
+- **Responsive Grid** – Adapts to screen sizes
 
 ### 🔧 Technical Features
-- **Local Storage** - Cart persistence across browser sessions
-- **Theme Persistence** - User's theme preference is saved
-- **Performance Optimized** - Efficient DOM manipulation and event handling
-- **Accessibility** - ARIA labels and keyboard navigation support
+- **Local Storage** – Persistent cart  
+- **Theme Persistence** – Saves user preference  
+- **Performance Optimized** – Efficient DOM and events  
+- **Accessibility** – ARIA support & keyboard navigation
 
 ---
 
@@ -107,6 +103,6 @@ subl .  # Sublime Text
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is made for educational purposes. Not licensed for commercial distribution.
 
 ---
