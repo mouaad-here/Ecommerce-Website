@@ -1,12 +1,12 @@
-# 🛒 E-commerce Website
+# E-commerce Website
 
-## 📹 Video Demo
+## Video Demo
 
-[![E-commerce Website Demo](https://img.shields.io/badge/Watch-Demo%20Video-blue?style=for-the-badge&logo=youtube)]()
+[![E-commerce Website Demo](https://img.shields.io/badge/Watch-Demo%20Video-blue?style=for-the-badge&logo=youtube)](https://drive.google.com/file/d/1YBi5YiSTwdYqrP_NTpnljlgcCFly5GCT/view?usp=sharing)
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -17,22 +17,22 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 A modern, responsive e-commerce website built with vanilla HTML, CSS, and JavaScript. This project features a sleek dark/light theme design, comprehensive product management, shopping cart functionality, and mobile-first responsive design.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🎨 Design & UI/UX
+### Design & UI/UX
 - **Theme Toggle** – Dark/Light mode with smooth transitions  
 - **Responsive Design** – Mobile-first layout for all devices  
 - **Modern Components** – Cards, modals, buttons with animations  
 - **Gradient Backgrounds** – Visually appealing overlays  
 - **Smooth Animations** – Enhanced user experience
 
-### 🛍️ E-commerce Features
+### E-commerce Features
 - **Product Catalog** – Grid of product cards  
 - **Product Modal** – Details with images and pricing  
 - **Shopping Cart** – Item management with total calculation  
@@ -40,13 +40,13 @@ A modern, responsive e-commerce website built with vanilla HTML, CSS, and JavaSc
 - **Category Filter** – Browse by category  
 - **Load More** – Button-based pagination
 
-### 📱 Mobile Experience
+### Mobile Experience
 - **Mobile Menu** – Slide-out navigation  
 - **Mobile Search** – Search modal for mobile  
 - **Touch-Friendly** – Optimized for gestures  
 - **Responsive Grid** – Adapts to screen sizes
 
-### 🔧 Technical Features
+### Technical Features
 - **Local Storage** – Persistent cart  
 - **Theme Persistence** – Saves user preference  
 - **Performance Optimized** – Efficient DOM and events  
@@ -54,7 +54,7 @@ A modern, responsive e-commerce website built with vanilla HTML, CSS, and JavaSc
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** - Semantic markup and structure
 - **CSS3** - Modern styling with CSS Grid, Flexbox, and Custom Properties
@@ -64,7 +64,7 @@ A modern, responsive e-commerce website built with vanilla HTML, CSS, and JavaSc
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 EcommerceWebsite/
@@ -75,7 +75,7 @@ EcommerceWebsite/
 ```
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
@@ -101,7 +101,7 @@ subl .  # Sublime Text
 ```
 ---
 
-## 📄 License
+## License
 
 This project is made for educational purposes. Not licensed for commercial distribution.
 
